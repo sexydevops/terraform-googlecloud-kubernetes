@@ -34,7 +34,7 @@ It will take time and when it finished you can see the service for the created c
 ## Testing
 1. You can test the load balancer:
 ```
-./test.sh
+chmod +x test.sh && ./test.sh
 ```
 2. Verify response:
 ```

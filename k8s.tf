@@ -1,3 +1,4 @@
+data "google_client_config" "provider" {}
 provider "kubernetes" {
   version = "~> 1.10.0"
   host    = google_container_cluster.default.endpoint
@@ -63,8 +64,8 @@ resource "kubernetes_replication_controller" "nginx" {
 
     template {
       container {
-        image = "nginx:latest"
-        name  = "nginx"
+        image = "bugb/angular9-sample-app"
+        name  = "angular9-sample-app"
 
         resources {
           limits {
